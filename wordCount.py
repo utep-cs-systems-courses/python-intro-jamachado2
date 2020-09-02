@@ -1,9 +1,13 @@
 import re
+import sys
 
 def wordCount():
+
+    textFname = sys.argv[1]
+    outputFname = sys.argv[2]
     # with statement automatically takes care of closing the file
     # r is only for reading, w is only for writing
-    with open('declaration.txt', 'r') as d, open('myOutput.txt', 'w') as output:
+    with open(textFname, 'r') as d, open(outputFname, 'w') as output:
 
         # Dictionary to store the total number of times each word appears
         wCounter = {}
